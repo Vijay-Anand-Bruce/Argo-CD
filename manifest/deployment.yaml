@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-deployment
+  labels:
+    app: argo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: argo
+  template:
+    metadata:
+      labels:
+        app: argo
+    spec:
+      containers:
+      - name: argo-test
+        image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/car-mod
+        ports:
+        - containerPort: 9000
