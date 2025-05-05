@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: argo-test
-        image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/car-mod
+        image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/eks
         ports:
         - containerPort: 9000
