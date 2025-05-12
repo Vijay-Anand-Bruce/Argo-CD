@@ -8,7 +8,10 @@ spec:
   source:
     repoURL: https://github.com/Vijay-Anand-Bruce/Argo-CD.git
     targetRevision: HEAD
-    path: manifest
+    path: manifest/templates
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
