@@ -11,7 +11,7 @@ spec:
     path: manifest
     helm:
       valueFiles:
-        - values.yaml
+        - dev-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default

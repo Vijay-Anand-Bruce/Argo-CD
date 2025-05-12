@@ -4,6 +4,11 @@ app1:
   label: argo
   image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/eks
   port: 9000
+  hpa:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 3
+    targetCPUUtilizationPercentage: 50
 
 app2:
   enabled: true
@@ -11,6 +16,11 @@ app2:
   label: argo-2
   image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/test
   port: 80
+  hpa:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 60
 
 ingress:
   enabled: true
