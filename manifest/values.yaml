@@ -1,0 +1,18 @@
+app1:
+  enabled: true
+  name: argo-deployment
+  label: argo
+  image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/eks
+  port: 9000
+
+app2:
+  enabled: true
+  name: argo-deployment-2
+  label: argo-2
+  image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/test
+  port: 80
+
+ingress:
+  enabled: true
+  hostname: vijay.klizos.com
+  certificateArn: arn:aws:acm:us-east-1:487383300987:certificate/8dd54571-d95c-4cbe-b004-79d8a73985bc

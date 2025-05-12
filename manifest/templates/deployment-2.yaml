@@ -1,28 +1,30 @@
+{{- if .Values.app2.enabled }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argo-deployment-2
+  name: {{ .Values.app2.name }}
   labels:
-    app: argo-2
+    app: {{ .Values.app2.label }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: argo-2
+      app: {{ .Values.app2.label }}
   template:
     metadata:
       labels:
-        app: argo-2
+        app: {{ .Values.app2.label }}
     spec:
       containers:
-      - name: argo-test-2
-        image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/test
-        ports:
-        - containerPort: 80
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
-          limits:
-            cpu: "250m"
-            memory: "256Mi"
+        - name: {{ .Values.app2.name }}
+          image: {{ .Values.app2.image }}
+          ports:
+            - containerPort: {{ .Values.app2.port }}
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+{{- end }}

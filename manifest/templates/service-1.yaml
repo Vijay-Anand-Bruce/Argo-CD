@@ -1,11 +1,13 @@
+{{- if .Values.app1.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
   name: argo-service
 spec:
   selector:
-    app: argo
+    app: {{ .Values.app1.label }}
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9000
+      targetPort: {{ .Values.app1.port }}
+{{- end }}
