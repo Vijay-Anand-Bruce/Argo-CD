@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Vijay-Anand-Bruce/Argo-CD.git
     targetRevision: HEAD
-    path: manifest/templates
+    path: manifest
     helm:
       valueFiles:
         - values.yaml
