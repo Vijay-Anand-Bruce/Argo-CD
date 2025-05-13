@@ -1,6 +1,7 @@
 app1:
   enabled: true
   name: argo-deployment
+  namespace: dev
   label: argo
   image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/eks
   port: 9000
@@ -13,6 +14,7 @@ app1:
 app2:
   enabled: true
   name: argo-deployment-2
+  namespace: dev
   label: argo-2
   image: 487383300987.dkr.ecr.us-east-1.amazonaws.com/test
   port: 80

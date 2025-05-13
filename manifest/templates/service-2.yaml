@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: argo-service-2
+  namespace: {{ .Values.app2.namespace}}
 spec:
   selector:
     app: {{ .Values.app2.label }}
