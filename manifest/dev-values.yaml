@@ -24,5 +24,5 @@ app2:
 
 ingress:
   enabled: true
-  hostname: vijay.klizos.com
-  certificateArn: arn:aws:acm:us-east-1:487383300987:certificate/8dd54571-d95c-4cbe-b004-79d8a73985bc
+  hostname: <your Domain>
+  certificateArn: <ACM ARN>
