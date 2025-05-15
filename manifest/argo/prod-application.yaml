@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Vijay-Anand-Bruce/Argo-CD.git
-    targetRevision: HEAD
+    targetRevision: prod
     path: manifest
     helm:
       valueFiles:
